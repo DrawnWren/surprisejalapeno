@@ -1,0 +1,22 @@
+{
+  "name": "surprisejalapeno",
+  "version": "1.0.0",
+  "description": "Surprisingly spicy",
+  "main": "server/web.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SurpriseJalapeno/surprisejalapeno.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SurpriseJalapeno/surprisejalapeno/issues"
+  },
+  "homepage": "https://github.com/SurpriseJalapeno/surprisejalapeno#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
