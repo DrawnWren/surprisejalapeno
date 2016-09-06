@@ -18,6 +18,15 @@ consumes:
 produces:
   - application/json
 paths:
+  /dog:
+    x-swagger-router-controller: another_router
+    get:
+      description: Returns 'A dog' to the caller
+      operationId: dog
+      responses:
+       "200":
+        description: Success
+        
   /hello:
     # binds a127 app logic to a route
     x-swagger-router-controller: hello_world

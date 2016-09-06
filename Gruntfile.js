@@ -4,6 +4,7 @@ module.exports = function gruntFun(grunt) {
     env: {
       dev: {
         PORT: 3000,
+        ROOT: __dirname
       },
     },
 
