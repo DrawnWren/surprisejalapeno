@@ -56,10 +56,6 @@ function handleSearch(req, res, next) {
   const location = req.query.q;
   const locResult = goog.geocode(location); // probably needs to get parsed into lat/long
 
-  locResult.then( d => {
-  console.log('Geo code result is , ', d.json.results[0].geometry.location);
-  });
-
   sherlock.getByPlace(location).then(d => resultsToDb(d)).then(
       () => {
         locResult.then(l => {
