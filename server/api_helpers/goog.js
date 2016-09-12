@@ -10,11 +10,9 @@ const googleMapsClient = google.createClient({ key: process.env.googleGeocode })
 
 function geocode(text) {
   return new Promise((fulfill, reject) => {
-    console.log('Trying to geocode, ', text);
     googleMapsClient.geocode({ address: text }, (err, response) => {
       if (err) reject(err);
       else {
-        console.log('Got response from geocode, ', geocode);
         fulfill(response);
       }
     });

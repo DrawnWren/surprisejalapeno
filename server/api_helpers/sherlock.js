@@ -6,7 +6,7 @@ const qs = require('querystring');
 // and body
 function getByPlace(place) {
   let qUrl = `https://gateway-a.watsonplatform.net/calls/data/GetNews`;
-  const queries = {
+  let queries = {
     outputMode: 'json',
     start: 'now-1d',
     end: 'now',
@@ -16,8 +16,8 @@ function getByPlace(place) {
   };
   let escapedPlace = place.split(' ').join('+');
   escapedPlace = encodeURIComponent(escapedPlace);
-  qUrl = qUrl + '?' + qs.stringify(queries);
-  // getUrl += `&q.enriched.url.enrichedTitle.entities.entity=|text=${escapedPlace},type=place|`;
+  queries = qs.stringify(queries);
+  qUrl = `${qUrl}?${queries}`;
   qUrl += `&q.enriched.url.entities.entity=|text=${escapedPlace}|`;
   return helpers.getUrl(qUrl).then(d => JSON.parse(d).result);
 }
