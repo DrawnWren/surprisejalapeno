@@ -63,7 +63,7 @@ function handleSearch(req, res, next) {
           toSearch.rad = 25;
           model.news.getByLocation(toSearch)
          .then(dbResponse => {
-             res.json(dbResponse)
+           res.json(dbResponse)
          });
         });
       })
