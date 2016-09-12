@@ -55,7 +55,7 @@ function handleSearch(req, res, next) {
 function handleSearch(req, res, next) {
   const location = req.query.q;
   const locResult = goog.geocode(location); // probably needs to get parsed into lat/long
-  //testing after here
+
   locResult.then( d => {
   console.log('Geo code result is , ', d.json.results[0].geometry.location);
   });
