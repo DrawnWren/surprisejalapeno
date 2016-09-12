@@ -5,7 +5,7 @@ const qs = require('querystring');
 // given a placename, returns all news articles with that entity in the title
 // and body
 function getByPlace(place) {
-  let qUrl = `https://gateway-a.watsonplatform.net/calls/data/GetNews`;
+  let qUrl = 'https://gateway-a.watsonplatform.net/calls/data/GetNews';
   let queries = {
     outputMode: 'json',
     start: 'now-1d',
